@@ -5,6 +5,8 @@
 	version="2.5">
 	<display-name>hellospring03</display-name>
 	
+	<!-- Encoding Filter -->
+	
 	<!-- Dispatcher servlet: Frontend Contller -->
 	<servlet>
 		<servlet-name>spring</servlet-name>
