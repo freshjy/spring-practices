@@ -32,8 +32,7 @@ public class HelloController {
 	public String hello4(String name, Model model) {
 		model.addAttribute("name", name);
 		return "/WEB-INF/views/hello.jsp";
-	}
-	
+	}	
 	
 	
 	@RequestMapping("/hello5")
