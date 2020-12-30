@@ -9,4 +9,4 @@ public class HelloController {
 	public String hello() {
 		return "/WEB-INF/views/hello.jsp";
 	}
-}
+} 
