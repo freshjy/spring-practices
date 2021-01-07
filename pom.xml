@@ -34,6 +34,8 @@
 		<module>mysite03</module>
 		<module>logex</module>
 		<module>aoptest</module>
+		<module>fileUpload</module>
+		<module>fileupload</module>
 	</modules>
 
 </project>
