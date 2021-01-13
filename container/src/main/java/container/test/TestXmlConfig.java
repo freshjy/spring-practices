@@ -14,13 +14,13 @@ import container.user.User2;
 public class TestXmlConfig {
 	public static void main(String[] args) {
 		// XML Auto Configuration(Annotation Scanning)
-		//testBeanFactory01();
+		testBeanFactory01();
 		
 		// XML Bean Configuration(빈설정, Explicit Configuration)
-		//testBeanFactory02();
+		testBeanFactory02();
 		
 		// XML Auto Configuration(Annotation Scanning)
-		//testApplicationContext01();
+		testApplicationContext01();
 		
 		// XML Bean Configuration(빈설정, Explicit Configuration)
 		testApplicationContext02();
@@ -43,6 +43,25 @@ public class TestXmlConfig {
 		//    : 같은 타입의 객체가 2개이상 있으면 에러
 		// 	  : type + id 또는 type + name으로 가져 와야 한다.
 		user = ac.getBean("user2", User.class);
+		System.out.println(user);
+		
+		// 2개 파라미터로 생성된 빈 가져오기1
+		user = ac.getBean("user3", User.class);
+		System.out.println(user);
+		// 2개 파라미터로 생성된 빈 가져오기2
+		user = ac.getBean("user4", User.class);
+		System.out.println(user);
+		
+		// 기본 생성자 + setter + DI 적용한 빈 가져오기1
+		user = ac.getBean("user5", User.class);
+		System.out.println(user);
+		
+		// 기본 생성자 + setter + DI 적용한 빈 가져오기2
+		user = ac.getBean("user6", User.class);
+		System.out.println(user);
+		
+		// setter를 사용한 리스트 세팅하기
+		user = ac.getBean("user7", User.class);
 		System.out.println(user);
 		
 		// 자원정리
