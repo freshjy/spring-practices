@@ -36,6 +36,7 @@
 		<module>aoptest</module>
 		<module>fileUpload</module>
 		<module>fileupload</module>
+		<module>container</module>
 	</modules>
 
 </project>
