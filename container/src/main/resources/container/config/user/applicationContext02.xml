@@ -12,12 +12,16 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 
-   <context:annotation-config />
-
-   <context:component-scan base-package="container.user">
-      <context:include-filter type="annotation"
-         expression="org.springframework.stereotype.Component" />         
-   </context:component-scan>
-
-
+	<!-- 초간단 빈 설정 -->
+    <bean id="user" class="container.user.User2" />
+   
+    <!-- 기본생성자로 빈 생성 -->
+	<bean id="user1" name="usr" class="container.user.User" />
+	
+	<!-- 파라미터 1개 생성자로 빈 생성 -->
+	<bean id="user2" class="container.user.User" >
+		<constructor-arg value="둘리"/>
+	</bean>
+	 
+	
 </beans>
