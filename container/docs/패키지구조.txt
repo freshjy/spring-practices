@@ -4,31 +4,36 @@
   |      |      |--- container
   |      |      |        |--- user
   |      |      |        |--- soundsystem
-  |      |      |        |--- dvdsystem
+  |      |      |        |--- videosystem
   |      |      |        |--- config
   |      |      |        |      |--- user
   |      |      |        |      |--- soundsystem
-  |      |      |        |      |--- dvdsystem
+  |      |      |        |      |--- videosystem
   |      |--- [resources]
   |      |      |--- container
   |      |      |        |--- config
   |      |      |        |      |--- user
   |      |      |        |      |--- soundsystem
-  |      |      |        |      |--- dvdsystem
+  |      |      |        |      |--- videosystem
   |--- [test]
   |      |--- [java]
   |      |      |--- container
   |      |      |        |--- user
   |      |      |        |--- soundsystem
-  |      |      |        |--- dvdsystem
+  |      |      |        |--- videosystem
   |      |--- [resources]
 
 
 main
   java  
     container.soundsystem
+    container.videosystem
     container.config.soundsystem
+    container.config.videosystem
   resources 
     container.config.soundsystem
+    container.config.videosystem
 test
-  container.soundsystem
+  java
+    container.soundsystem
+    container.videosystem
