@@ -1,6 +1,5 @@
-package container.config.videosystem;
+package container.videosystem;
 
-import container.videosystem.DigitalVideoDisc;
 
 public class Avengers implements DigitalVideoDisc {
 	private String title = "Avangers";
