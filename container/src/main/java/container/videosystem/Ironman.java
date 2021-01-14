@@ -1,7 +1,7 @@
 package container.videosystem;
 
 public class Ironman implements DigitalVideoDisc {
-	private String title = "Ironman";
+	private String title = "IronMan";
 	private String studio = "Marvel";
 	
 	@Override
