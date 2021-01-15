@@ -25,7 +25,7 @@
 	<bean id="avengersInfinityWar" class="container.videosystem.BlankDisc" >
 		<constructor-arg name="studio" value="Marvel"/>
 		<constructor-arg name="title" value="Avengers Infinity War"/>
-	</bean>	
+	</bean>
 	
 	<!-- 04. 빈설정: 생성자의 파라미터 리터럴을 사용02 -->
 	<bean id="avengersEndgame" class="container.videosystem.BlankDisc" 
