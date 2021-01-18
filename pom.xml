@@ -37,6 +37,7 @@
 		<module>fileUpload</module>
 		<module>fileupload</module>
 		<module>container</module>
+		<module>hellospring06</module>
 	</modules>
 
 </project>
