@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>hellospring06</artifactId>
 	<packaging>war</packaging>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
