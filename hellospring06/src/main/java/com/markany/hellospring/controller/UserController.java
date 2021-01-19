@@ -23,7 +23,7 @@ public class UserController {
 
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public String join() {
-		return "/WEB-INF/views/join.jsp";
+		return "join";
 	}
 	
 	//@PostMapping("/join")
@@ -31,7 +31,7 @@ public class UserController {
 	@RequestMapping(value="/join", method=RequestMethod.POST)
 //	public String join(String name, String email, String password) {
 	public String join(UserVo vo) {
-		System.out.println("UserController:join2:" + vo);
+		System.out.println("UserController:join:" + vo);
 		return "redirect:/";
 	}
 	
@@ -41,7 +41,7 @@ public class UserController {
 		/**
 		 * 만일 n이라는 이름으로 파라미터가 전달되지 않으면 400 Bad Request 오류 발생
 		 */
-		return "UserController:update2";
+		return "UserController:update";
 	}
 	
 	@ResponseBody

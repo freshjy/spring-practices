@@ -18,38 +18,54 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-		</dependencies>
+		</dependencies>	
 	</dependencyManagement>
 	
 	<dependencies>
-		 <!-- Spring boot stater -->
-		 <dependency>
+		<!-- spring boot stater -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 		
-		<!-- Spring boot web starter -->
-		 <dependency>
+		<!-- Spring boot devtools: live reload -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<!-- spring boot web stater -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		 
+		
 		<!-- jstl -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
 		
-		<!-- tomcat jesper -->
+		<!-- tomcat jasper -->
 		<dependency>
 		    <groupId>org.apache.tomcat.embed</groupId>
 		    <artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 		
 		<!-- test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>					
+				</exclusion>
+			</exclusions>
+		</dependency>
 		
-	</dependencies>	
-	
+	</dependencies>
 	
 	<build>
 		<finalName>hellospring06</finalName>
@@ -66,8 +82,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-				<fork>true</fork>
-				<mainClass>com.markany.hellospring.BootApp</mainClass>
+					<fork>true</fork>
+					<mainClass>com.markany.hellospring.BootApp</mainClass>
 				</configuration>
 				<executions>
 					<execution>
@@ -78,6 +94,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build>
+	</build>	
 	
 </project>

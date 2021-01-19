@@ -10,20 +10,20 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 	@RequestMapping("/hello")
 	public String hello() {
-		return "/WEB-INF/views/hello.jsp";
+		return "hello";
 	}
 	
 	@RequestMapping("/hello2")
 	public String hello2(String name) {
 		System.out.println(name);
-		return "/WEB-INF/views/hello.jsp";
+		return "hello";
 	}
 	
 	@RequestMapping("/hello3")
 	public ModelAndView hello3(String name) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("name", name);
-		mav.setViewName("/WEB-INF/views/hello.jsp");
+		mav.setViewName("hello");
 		
 		return mav;
 	}
@@ -31,7 +31,7 @@ public class HelloController {
 	@RequestMapping("/hello4")
 	public String hello4(String name, Model model) {
 		model.addAttribute("name", name);
-		return "/WEB-INF/views/hello.jsp";
+		return "hello";
 	}	
 	
 	
